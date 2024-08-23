@@ -30,7 +30,10 @@ Instead of using `go run` you can download pre-compiled binary from [Github rele
 Another alternative is to use docker, e.g.
 
 ```bash
-docker run -it --rm -v "$PWD:$PWD" -w "$PWD" ghcr.io/telkomindonesia/b64f:latest [decode|encode]
+docker run -i --rm \
+    -v "$PWD:$PWD" -w "$PWD" \
+    ghcr.io/telkomindonesia/b64f:latest \
+    [decode|encode]
 ```
 
 ## Tips
