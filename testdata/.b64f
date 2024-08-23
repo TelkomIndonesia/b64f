@@ -1,2 +1,2 @@
-a/bb/ccc/*
-a/bb/f
+a/bb/**/*.ext
+a/*

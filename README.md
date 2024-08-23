@@ -23,4 +23,16 @@ Base64 Encode/Decode multiple files.
     go run -mod=mod github.com/telkomindonesia/b64f decode
     ```
 
+## Tips
+
+You can use `makefie` to make the command simpler, for example:
+
+```makefile
+b64f: mode ?= "decode"
+b64f:
+    go run -mod=mod github.com/telkomindonesia/b64f $(mode)        
+```
+
+which can then be used using `make b64f` or `make b64f mode=encode`
+
 see [testdata](./testdata/) folder for example.
