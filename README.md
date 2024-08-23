@@ -23,6 +23,16 @@ Base64 Encode/Decode multiple files.
     go run -mod=mod github.com/telkomindonesia/b64f decode
     ```
 
+### Run Methods
+
+Instead of using `go run` you can download pre-compiled binary from [Github releases page](https://github.com/TelkomIndonesia/b64f/releases).
+
+Another alternative is to use docker, e.g.
+
+```bash
+docker run -it --rm -v "$PWD:$PWD" -w "$PWD" ghcr.io/telkomindonesia/b64f:latest [decode|encode]
+```
+
 ## Tips
 
 You can use `makefie` to make the command simpler, for example:
