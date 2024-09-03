@@ -111,7 +111,7 @@ func decodeFile(base fs.FS, f string) (err error) {
 	}
 	defer w.Close()
 
-	rB64 := base64.NewDecoder(base64.StdEncoding.WithPadding(base64.StdPadding), r)
+	rB64 := base64.NewDecoder(base64.StdEncoding, r)
 	if _, err := io.Copy(w, rB64); err != nil {
 		return fmt.Errorf("failed to decode file '%s' to '%s': %w", f, dec, err)
 	}
